@@ -25,7 +25,7 @@ public class DbSale {
     @JoinColumn(name = "customer_id", insertable = false, updatable = false)
     private DbCustomer customer;
 
-    @OneToMany(mappedBy = "sale")
+    @OneToMany(mappedBy = "sale", cascade = {CascadeType.ALL})
     private List<DbSaleDetail> details;
 
     public Integer getId() {

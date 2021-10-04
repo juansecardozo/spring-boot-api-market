@@ -13,6 +13,7 @@ public class DbSaleDetail {
     private Boolean active;
 
     @ManyToOne
+    @MapsId("saleId")
     @JoinColumn(name = "sale_id", insertable = false, updatable = false)
     private DbSale sale;
 
